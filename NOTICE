@@ -1,0 +1,24 @@
+Third-Party Licenses and Notices
+================================
+
+This project includes or depends on the following third-party packages.
+Please keep this file with any distributed package or source release.
+
+Dependencies:
+- @pkmn/data — MIT
+- @pkmn/dex — MIT
+- @pkmn/sets — MIT
+- @types/node — MIT
+- @typescript-eslint/eslint-plugin — MIT
+- @typescript-eslint/parser — BSD-2-Clause
+- eslint — MIT
+- eslint-config-prettier — MIT
+- eslint-plugin-prettier — MIT
+- prettier — MIT
+- typescript — Apache-2.0
+
+Notes:
+- The full license texts for these packages are typically included in their
+  respective npm package distributions.
+- When redistributing this project, preserve the copyright and license
+  notices required by those third-party licenses.
