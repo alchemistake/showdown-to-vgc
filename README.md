@@ -1,4 +1,4 @@
-# @showdown-to-vgc
+# showdown-to-vgc
 
 A simple showdown to VGC format. This can be used for VGC Team Sheets and other things needing simple data from showdown for your own applications.
 
