@@ -5,14 +5,15 @@
   "keywords": [],
   "author": "kasp470f",
   "license": "MIT",
-  "repository":"https://github.com/kasp470f/showdown-to-vgc",
+  "repository": "https://github.com/kasp470f/showdown-to-vgc",
   "scripts": {
     "build": "tsc",
     "test": "npm run build && node --test dist/tests/*.test.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "release": "git push && git push --tags && npm publish"
   },
   "devDependencies": {
     "@types/node": "^26.1.2",
