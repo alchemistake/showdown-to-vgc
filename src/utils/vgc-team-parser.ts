@@ -1,15 +1,15 @@
 import { Generation, Generations, type PokemonSet } from '@pkmn/data';
-import type { Format } from '../types/format';
+import type { Format, GenerationID } from '../types/format';
 import type { VGCPokemon, VGCTeam } from '../types/vgc-team';
 import { FormRequiredSpecies } from '../data/form-required-species';
 import { calcStatChampions } from './stat-calc';
 import { Dex as GenerationDex, type StatID } from '@pkmn/dex';
-import type { GenerationNum, Species } from '@pkmn/dex-types';
+import type { Species } from '@pkmn/dex-types';
 import type { ShowdownTeam } from '../types/showdown-team';
 
 export function getVGCTeam(
   showdownTeam: ShowdownTeam,
-  genNum: GenerationNum,
+  genNum: GenerationID,
   format: Format = undefined,
 ): VGCTeam {
   try {

@@ -1,9 +1,10 @@
-import { type GenerationNum, Generations } from '@pkmn/data';
+import { Generations } from '@pkmn/data';
 import { Dex } from '@pkmn/dex';
 import { Team } from '@pkmn/sets';
 import type { ShowdownTeam } from '../types/showdown-team';
+import { GenerationID } from '../types/format';
 
-export function getShowdownTeam(text: string, genNum: GenerationNum): ShowdownTeam | undefined {
+export function getShowdownTeam(text: string, genNum: GenerationID): ShowdownTeam | undefined {
   try {
     const gens = new Generations(Dex);
     const gen = gens.get(genNum);
