@@ -3,10 +3,7 @@ import { Dex } from '@pkmn/dex';
 import { Team } from '@pkmn/sets';
 import type { ShowdownTeam } from '../types/showdown-team';
 
-export function getShowdownTeam(
-  text: string,
-  genNum: GenerationNum,
-): ShowdownTeam | undefined {
+export function getShowdownTeam(text: string, genNum: GenerationNum): ShowdownTeam | undefined {
   try {
     const gens = new Generations(Dex);
     const gen = gens.get(genNum);
