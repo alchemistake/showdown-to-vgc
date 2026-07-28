@@ -8,6 +8,7 @@
   "repository": "https://github.com/kasp470f/showdown-to-vgc",
   "scripts": {
     "build": "tsc",
+    "prepack": "npm run build",
     "test": "npm run build && node --test dist/tests/*.test.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
@@ -15,6 +16,13 @@
     "format:check": "prettier --check .",
     "release": "git push && git push --tags && npm publish"
   },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "README.md",
+    "NOTICE",
+    "LICENSE"
+  ],
   "devDependencies": {
     "@types/node": "^26.1.2",
     "typescript": "5.3.3",
