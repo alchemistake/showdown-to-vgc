@@ -1,5 +1,5 @@
 import type { StatID } from '@pkmn/data';
-import natureCalc from './nature-calc';
+import { calcNatureMultiplier } from './nature-calc';
 
 export function calcStatChampions(
   stat: StatID,
@@ -12,7 +12,7 @@ export function calcStatChampions(
 
     return baseStat + sp + 75;
   } else {
-    const natureMultiplierValue = natureCalc(stat, nature);
+    const natureMultiplierValue = calcNatureMultiplier(stat, nature);
 
     return Math.floor(natureMultiplierValue * (baseStat + sp + 20));
   }
