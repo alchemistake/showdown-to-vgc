@@ -1,7 +1,15 @@
 {
   "name": "@kasp470f/showdown-to-vgc",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "default": "./build/index.js"
+    }
+  },
   "keywords": [],
   "author": "kasp470f",
   "license": "MIT",
@@ -9,7 +17,7 @@
   "scripts": {
     "build": "tsc",
     "prepack": "npm run build",
-    "test": "npm run build && node --test dist/tests/*.test.js",
+    "test": "npm run build && node --test build/tests/*.test.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "format": "prettier --write .",
@@ -17,8 +25,8 @@
     "release": "git push && git push --tags && npm publish"
   },
   "files": [
-    "dist/**/*.js",
-    "dist/**/*.d.ts",
+    "build/**/*.js",
+    "build/**/*.d.ts",
     "README.md",
     "NOTICE",
     "LICENSE"

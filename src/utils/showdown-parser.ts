@@ -3,7 +3,7 @@ import { Dex } from '@pkmn/dex';
 import { Team } from '@pkmn/sets';
 import type { ShowdownTeam } from '../types/showdown-team';
 
-export default function getShowdownTeam(
+export function getShowdownTeam(
   text: string,
   genNum: GenerationNum,
 ): ShowdownTeam | undefined {

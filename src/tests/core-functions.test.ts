@@ -5,6 +5,7 @@ import getShowdownTeam from '../utils/showdown-parser';
 import { getVGCTeam } from '../utils/vgc-team-parser';
 import { calcStatChampions } from '../utils/stat-calc';
 import calcNatureMultiplier from '../utils/nature-calc';
+import packageRoot, { getVGCTeam as packageGetVGCTeam } from '../index';
 
 const sampleTeamGenerations = `
 Pikachu @ Light Ball
@@ -78,4 +79,9 @@ test('nature multipliers reflect the plus and minus stats', () => {
   assert.equal(calcNatureMultiplier('atk', 'Adamant'), 1.1);
   assert.equal(calcNatureMultiplier('atk', 'Modest'), 0.9);
   assert.equal(calcNatureMultiplier('atk', 'Serious'), 1);
+});
+
+test('the package root exposes the public API', () => {
+  assert.equal(typeof packageRoot, 'function');
+  assert.equal(typeof packageGetVGCTeam, 'function');
 });

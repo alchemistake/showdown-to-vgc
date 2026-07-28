@@ -15,5 +15,5 @@ module.exports = {
   rules: {
     'no-unused-vars': ['warn', { args: 'none', ignoreRestSiblings: true }],
   },
-  ignorePatterns: ['dist/', 'node_modules/'],
+  ignorePatterns: ['build/', 'node_modules/'],
 };

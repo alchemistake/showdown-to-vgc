@@ -1,7 +1,7 @@
 import type { StatID } from '@pkmn/data';
 import { Dex } from '@pkmn/dex';
 
-export default function calcNatureMultiplier(stat: StatID, nature: string): number {
+export function calcNatureMultiplier(stat: StatID, nature: string): number {
   const natureObj = Dex.natures.get(nature);
 
   if (natureObj) {
