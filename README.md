@@ -4,5 +4,5 @@ A simple showdown to VGC format. This can be used for VGC Team Sheets and other 
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.<br/>
 Third-party notices for bundled dependencies are listed in [NOTICE](NOTICE).
