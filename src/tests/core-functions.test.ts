@@ -1,11 +1,11 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
-import getShowdownTeam from '../utils/showdown-parser';
+import { getShowdownTeam } from '../utils/showdown-parser';
 import { getVGCTeam } from '../utils/vgc-team-parser';
 import { calcStatChampions } from '../utils/stat-calc';
-import calcNatureMultiplier from '../utils/nature-calc';
-import packageRoot, { getVGCTeam as packageGetVGCTeam } from '../index';
+import { calcNatureMultiplier } from '../utils/nature-calc';
+import { getVGCTeam as packageGetVGCTeam } from '../index';
 
 const sampleTeamGenerations = `
 Pikachu @ Light Ball
@@ -51,6 +51,7 @@ test('getVGCTeam uses champion stat calculations for champions format', () => {
   const team = getShowdownTeam(sampleTeamChampions, 9);
   assert.ok(team);
 
+  if (!team) throw new Error('team should be defined');
   const vgcTeam = getVGCTeam(team, 9, 'champions');
 
   assert.ok(vgcTeam);
@@ -58,6 +59,7 @@ test('getVGCTeam uses champion stat calculations for champions format', () => {
 
   const dragonite = vgcTeam?.[0];
   assert.ok(dragonite);
+  if (!dragonite) throw new Error('dragonite should be defined');
   assert.equal(dragonite.name, 'Dragonite');
   assert.equal(dragonite.nature, 'Calm');
   assert.equal(dragonite.teraType, undefined);
@@ -82,6 +84,5 @@ test('nature multipliers reflect the plus and minus stats', () => {
 });
 
 test('the package root exposes the public API', () => {
-  assert.equal(typeof packageRoot, 'function');
   assert.equal(typeof packageGetVGCTeam, 'function');
 });
